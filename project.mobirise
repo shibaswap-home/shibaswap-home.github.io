@@ -1,0 +1,151 @@
+{
+  "settings": {
+    "name": "shibaswap",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#141824"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.13",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/shibaswap_1.png",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://shibaswap-home.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nsitemap: https://shibaswap-home.github.io/sitemap.xml\n",
+    "imageResize": true,
+    "mbrsiteDomain": "b23zbmcdtm",
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 3,
+    "versionPublish": "5.9.13"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "ShibaSwap® | Official Website",
+        "meta_descr": "NFTS. Buy, Sell and Trade 10,000 unique Shiboshis. Unique and only available on ShibaSwap. You do not want to miss this unique NFT drop!",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://shiba-swap.hpage.com/\"><img src=\"@PROJECT_PATH@/assets/images/shibaswap-3418x1991.png\" alt=\"Shibaswap\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "u5zFEbyCgV",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-1"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#141824\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#141824\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Shibaswap: Unleashing the Power of Decentralized Finance for Shiba Inu Community</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Introduction:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Decentralized finance (DeFi) has revolutionized the world of cryptocurrencies, providing users with unprecedented financial opportunities. <a href=\"https://shibaswap-home.github.io/\" class=\"text-primary\">Shibaswap</a>, a decentralized exchange (DEX) and yield farming platform, has emerged as a prominent player in the DeFi ecosystem. In this article, we explore the world of <a href=\"https://shibaswap.com/#/\" class=\"text-primary\">Shibaswap</a>, examining its features, benefits, and the transformative impact it has on the Shiba Inu community.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Understanding Shibaswap:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Shibaswap is a decentralized exchange and yield farming platform built on the Ethereum blockchain. It is designed specifically for the Shiba Inu community, a rapidly growing community of cryptocurrency enthusiasts and dog lovers. Shibaswap enables users to trade Shiba Inu (SHIB) tokens and other compatible tokens, participate in liquidity pools, and engage in yield farming to earn rewards.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features and Functionalities:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Shibaswap offers several key features and functionalities that make it a popular choice within the DeFi space:<br><br>a. Token Swapping: Users can easily swap Shiba Inu (SHIB) tokens and other compatible tokens directly on the platform. Shibaswap utilizes automated market-making (AMM) algorithms to ensure efficient and secure token swaps.<br><br>b. Liquidity Pools: Shibaswap allows users to provide liquidity to various token pairs by depositing their tokens into liquidity pools. By doing so, users become liquidity providers and earn a portion of the transaction fees generated by the platform.<br><br>c. Yield Farming: Users can engage in yield farming by staking their tokens in designated farming pools. By doing so, they earn additional tokens as rewards, incentivizing participation and providing an opportunity to generate passive income.<br><br>d. Governance and Voting: Shibaswap incorporates a decentralized governance system that allows token holders to actively participate in decision-making processes. Token holders can vote on proposals, contribute to the development of the platform, and shape its future direction.<br><br>e. Security and Audits: Shibaswap emphasizes security and undergoes regular audits to ensure the platform's integrity. The team behind Shibaswap actively works to identify and address potential vulnerabilities, providing users with a secure and reliable DeFi experience.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Benefits of Shibaswap:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Shibaswap offers several significant benefits to the Shiba Inu community and DeFi enthusiasts in general:<br><br>a. Community Engagement: Shibaswap fosters a vibrant and engaged community within the Shiba Inu ecosystem. It provides a platform for community members to connect, collaborate, and actively participate in the governance and development of the platform.<br><br>b. Liquidity Provision and Rewards: By participating in liquidity pools, users can provide liquidity to the platform and earn a portion of the transaction fees. This incentivizes users to contribute to the liquidity of the ecosystem while earning rewards.<br><br>c. Yield Farming Opportunities: Shibaswap's yield farming feature allows users to earn additional tokens by staking their assets. This enables users to generate passive income and maximize the potential returns on their investments.<br><br>d. Token Utility and Value: Shibaswap enhances the utility and value of Shiba Inu (SHIB) tokens. The platform provides a marketplace for trading SHIB tokens and other compatible tokens, increasing liquidity and facilitating price discovery.<br><br>e. Decentralized Governance: Shibaswap's decentralized governance model empowers token holders to actively participate in decision-making processes. This ensures that the community has a voice in shaping the future of the platform, enhancing transparency and inclusivity.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Transformative Impact on the Shiba Inu Community:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Shibaswap has a transformative impact on the Shiba Inu community and the broader DeFi landscape:<br><br>a. Empowering the Shiba Inu Community: Shibaswap empowers the Shiba Inu community by providing a dedicated platform for token trading, liquidity provision, and yield farming. It strengthens the sense of community, encourages participation, and fosters collaboration among community members.<br><br>b. Democratizing Financial Opportunities: Shibaswap democratizes financial opportunities by providing users with access to decentralized financial tools and services. It eliminates the need for intermediaries, allowing users to control their funds, earn rewards, and participate in the governance of the platform.<br><br>c. Driving Innovation and Adoption: Shibaswap's success and popularity within the Shiba Inu community drive innovation and adoption of DeFi concepts. It inspires developers and entrepreneurs to explore new possibilities within the DeFi ecosystem, spurring further growth and advancements.<br><br>d. Enhancing Liquidity and Market Efficiency: Shibaswap enhances liquidity within the Shiba Inu ecosystem by providing a platform for token trading and liquidity provision. This increased liquidity improves market efficiency, reduces slippage, and creates a more robust trading environment.<br><br>e. Expanding the Shiba Inu Ecosystem: Shibaswap plays a vital role in expanding the Shiba Inu ecosystem by attractingnew users and projects. The platform's features and benefits attract developers and entrepreneurs to build on top of the Shiba Inu ecosystem, leading to the creation of new decentralized applications (dApps) and fostering further innovation.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Conclusion:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Shibaswap represents an integral part of the Shiba Inu community and the broader DeFi landscape. With its decentralized exchange and yield farming functionalities, Shibaswap empowers users to actively participate in the ecosystem, providing opportunities for liquidity provision, yield farming, and governance. By fostering community engagement, driving innovation, and democratizing financial opportunities, Shibaswap contributes to the growth and development of the Shiba Inu community and the wider DeFi space. As the platform continues to evolve, it holds the potential to unleash the power of decentralized finance for the benefit of the Shiba Inu community and beyond.<br></p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_anchor": "article07-2",
+          "_isUserblock": true,
+          "_cid": "u5zFPrsf2S",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
